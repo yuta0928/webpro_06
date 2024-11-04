@@ -53,7 +53,6 @@ app.get("/janken", (req, res) => {
   }
   total += 1;
 
-  
   const display = { //表示する変数
     your: hand,
     cpu: cpu,
