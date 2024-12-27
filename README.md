@@ -59,7 +59,7 @@ app.get("/janken", (req, res) => {
 
 ```mermaid
 flowchart TD;
-start["開始"]
+start["開始"];
 end["終了"]
 1["コンピュータの手の決定"]
 2{"じゃんけんの判定"}
