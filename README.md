@@ -62,11 +62,13 @@ flowchart TD;
 
 start["開始"];
 end1["終了"]
+one["コンピュータの手の決定"]
 if{"条件に合うか"}
 win["勝ち"]
 loose["負け"]
 
-start --> if
+start --> one
+one --> if
 if -->|yes| win
 win --> end1
 if -->|no| loose
