@@ -61,16 +61,20 @@ app.get("/janken", (req, res) => {
 flowchart TD;
 
 start["開始"];
-end1["終了"]
-if{"条件に合うか"}
-win["勝ち"]
-loose["負け"]
+end["終了"]
+1["コンピュータの手の決定"]
+2{"じゃんけんの判定"}
+3["勝利数の合計を表示"]
+win["点数を追加"]
+lose["そのまま"]
 
-start --> if
-if -->|yes| win
-win --> end1
-if -->|no| loose
-loose --> end1
+start --> 1
+1 --> 2
+2 -->|勝ち| win
+2 -->|負け| lose
+win --> 3
+lose --> 3
+3 --> end
 ```
 ## 占いプログラム
 
