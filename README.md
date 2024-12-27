@@ -64,14 +64,14 @@ start["開始"];
 end1["終了"]
 one["コンピュータの手の決定"]
 if{"じゃんけんの判定"}
-win["勝ち"]
-loose["負け"]
+win["点数を追加"]
+loose["そのまま"]
 
 start --> one
 one --> if
-if -->|yes| win
+if -->|勝ち| win
 win --> end1
-if -->|no| loose
+if -->|負け・あいこ| loose
 loose --> end1
 ```
 ## 占いプログラム
