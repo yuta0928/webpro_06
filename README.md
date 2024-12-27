@@ -59,24 +59,18 @@ app.get("/janken", (req, res) => {
 
 ```mermaid
 flowchart TD;
-start["開始"];
-end["終了"]
-1["コンピュータの手の決定"]
-2{"じゃんけんの判定"}
-3["結果を表示"]
-win["勝ち：点数を追加"]
-lose["負け：そのまま"]
-draw["引き分け：そのまま"]
 
-start --> 1
-1 --> 2
-2 -->|勝ち| win
-win --> 3
-2 -->|負け| lose
-lose --> 3
-2 -->|引き分け| draw
-draw --> 3
-3 --> end
+start["開始"];
+end1["終了"]
+if{"条件に合うか"}
+win["勝ち"]
+loose["負け"]
+
+start --> if
+if -->|yes| win
+win --> end1
+if -->|no| loose
+loose --> end1
 ```
 ## 占いプログラム
 
