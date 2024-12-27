@@ -19,11 +19,6 @@ console.log( 'Hello' );
 
 ```mermaid
 flowchart TD;
-開始 --> 終了;
-```
-
-```mermaid
-flowchart TD;
 
 start["開始"];
 end1["終了"]
