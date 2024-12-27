@@ -13,6 +13,8 @@ views/uranai.ejs | 占いのテンプレートファイル
 public/gacha.html | ガチャの開始画面
 views/gacha.ejs | ガチャのテンプレートファイル
 
+## じゃんけんプログラム
+
 ```javascript
 app.get("/janken", (req, res) => {
   let hand = req.query.hand;
@@ -70,10 +72,7 @@ win --> end1
 if -->|no| loose
 loose --> end1
 ```
-
-## 使用方法
-1. ```node app5.js```でプログラムを起動する
-1. Webブラウザでlocalhost:8080/public/uranai.htmlにアクセスする
+## 占いプログラム
 
 ```javascript
 app.get("/uranai", (req, res) => {
@@ -98,7 +97,9 @@ app.get("/uranai", (req, res) => {
 
 ## 使用方法
 1. ```node app5.js```でプログラムを起動する
-1. Webブラウザでlocalhost:8080/public/gacha.htmlにアクセスする
+1. Webブラウザでlocalhost:8080/public/uranai.htmlにアクセスする
+
+## ガチャプログラム
 
 ```javascript
 app.get("/gacha", (req, res) => {
@@ -208,3 +209,7 @@ app.get("/gacha", (req, res) => {
   res.render( 'gacha', {number:num, gacha:gacha,star:star} );
 });
 ```
+
+## 使用方法
+1. ```node app5.js```でプログラムを起動する
+1. Webブラウザでlocalhost:8080/public/gacha.htmlにアクセスする
