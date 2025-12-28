@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>109シネマズ木場 上映中映画一覧</title></head>
+<body>
+
+<h2>109シネマズ木場 上映中の映画</h2>
+<table border="1">
+<tr>
+  <th>ID</th><th>タイトル</th><th>ジャンル</th><th>上映時間</th><th>レーティング</th><th>料金</th>
+</tr>
+
+<% let i = 0; %>
+<% for (let m of data) { %>
+<tr>
+  <td><%= m.id %></td>
+  <td><a href="/movies/<%= i %>"><%= m.title %></a></td>
+  <td><%= m.genre %></td>
+  <td><%= m.duration %></td>
+  <td><%= m.rating %></td>
+  <td>¥<%= m.price %></td>
+</tr>
+<% i++; } %>
+
+</table>
+</body>
+</html>

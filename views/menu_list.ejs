@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>学食メニュー一覧</title>
+  </head>
+  <body>
+    
+    <h2>学食メニュー一覧</h2>
+    
+    <h3>営業情報</h3>
+    <ul>
+      <li>1F：<%= info["1F"] %></li>
+      <li>2F：<%= info["2F"] %></li>
+    </ul>
+    
+    <table border="1">
+      <tr><th>ID</th><th>階</th><th>分類</th><th>メニュー名</th><th>価格</th></tr>
+      
+      <% let i = 0; %>
+      <% for(let row of data){ %>
+        <tr>
+          <td><%= row.id %></td>
+          <td><%= row.floor %></td>
+          <td><%= row.category %></td>
+          <td><a href="/cafeteria/<%= i %>"><%= row.name %></a></td>
+          <td>¥<%= row.price %></td>
+        </tr>
+        <% i++; } %>
+      
+      </table>
+    </body>
+</html>
+

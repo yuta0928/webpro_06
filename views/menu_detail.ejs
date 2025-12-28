@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= data.name %></title>
+  </head>
+  <body>
+    
+    <h2><%= data.name %> の詳細</h2>
+    
+    <table border="1">
+      <tr><td>ID</td><td><%= data.id %></td></tr>
+      <tr><td>階</td><td><%= data.floor %></td></tr>
+      <tr><td>分類</td><td><%= data.category %></td></tr>
+      <tr><td>価格</td><td>¥<%= data.price %></td></tr>
+    </table>
+    
+    <h3>営業情報</h3>
+    <ul>
+      <li>1F：<%= info["1F"] %></li>
+      <li>2F：<%= info["2F"] %></li>
+    </ul>
+    
+    <a href="/cafeteria">一覧へ戻る</a>
+  
+  </body>
+</html>
